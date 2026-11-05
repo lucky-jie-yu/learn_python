@@ -1,0 +1,14 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+.venv/
+venv/
+
+# 本地编辑器配置
+.idea/
+.vscode/
+
+# 本地私有配置
+.env

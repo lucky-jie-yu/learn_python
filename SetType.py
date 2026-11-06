@@ -53,5 +53,35 @@ print(a)
 
 #删除元素，remove(x)（删除不存在的抛异常）,discard(x)（删除不存在的抛异常）,pop(),pop()随机删除
 
+print("----------------------------------------")
+#判断子集，超集，不相交集
+a = {1, 2, 3, 4, 5, 6}
+b = {2, 5, 6}
+print(a.issubset(b)) #判断a
+c = {6, 7}# 是否是b的子集
+print(b.issubset(a))  #判断b是否是a的子集
+print(a.issuperset(b))  #判断a是否是b的超集
+print(b.isdisjoint(a))  #判断两个集合是否没有公共元素
+print("-------------------------------------")
+#也可以使用比较运算符
+print(a <= b) #子集
+print(a < b) #真子集
+print(a >= b) #超集
+
+print("------------------------------")
+#不可变集合frozenset
+a = frozenset({2, 1, 3, 4})
+print(sorted(a))
+print(type(a))
+b = frozenset([7, 9, 5])
+print(a | b)
+print(a & b)
+
+#由于 frozenset 本身可以作为可哈希对象使用，因此也可以将它作为其他集合的元素
+c = {frozenset([1, 2]), frozenset([3, 4]), frozenset([5, 6])}
+print(len(c))
+
+
+
 
 

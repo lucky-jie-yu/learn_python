@@ -46,3 +46,26 @@ class Sample(Speaker, Student):
 
 w = Sample("yujie", 25, 45, 100, "演说家") ##方法名同，默认调用的是在括号中参数位置排前父类的方法
 w.speak() #输出，我叫 yujie，我是一个 演说家
+
+
+print("----------------------------------------------------------------")
+#运算符重载
+class Vector:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def __str__(self):
+        return "Vector (%d %d)" %(self.a, self.b)
+    def __add__(self, other):
+        return Vector(self.a + other.a, self.b + other.b)
+
+v1 = Vector(1, 2)
+v2 = Vector(3, 6)
+print(v1)
+print(v2)
+v3 = v1 + v2
+print(v3)
+
+
+
+
